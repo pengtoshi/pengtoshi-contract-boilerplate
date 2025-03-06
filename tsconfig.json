@@ -13,5 +13,5 @@
       "~/test/*": ["./test/hardhat/*"]
     }
   },
-  "include": ["./hardhat.config.ts", "src", "tools", "./typechain-types"],
+  "include": ["./hardhat.config.ts", "src", "tools", "./typechain-types"]
 }

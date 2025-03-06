@@ -8,14 +8,14 @@ contract Hello {
 
     event SayHello(string message);
 
-    constructor() payable {
+    constructor(string memory _name) payable {
         owner = payable(msg.sender);
-        name = "Pengtoshi Nakamoto";
+        name = _name;
         helloCount = 0;
     }
 
-    function sayHello(string memory _name) public {
+    function sayHello(string memory targetName) public {
         helloCount++;
-        emit SayHello(string.concat("Hello, ", _name, "! My name is ", name, "."));
+        emit SayHello(string.concat("Hello, ", targetName, "! My name is ", name, "."));
     }
 }
