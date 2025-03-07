@@ -9,7 +9,8 @@
     "deploy:base_sepolia": "dotenv -e ./tools/env/.env.base_sepolia -- npx hardhat deploy --network base_sepolia --export ./deployments/base_sepolia.json",
     "prepare": "npm-run-all prepare:*",
     "prepare:husky": "husky install",
-    "test": "export $(cat tools/env/.hardhat.env | xargs) && HARDHAT_DEPLOY_FIXTURE=true hardhat test"
+    "test": "dotenv -e ./tools/env/.env.local -- forge test -vv",
+    "test:log": "dotenv -e ./tools/env/.env.local -- forge test -vvv"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
