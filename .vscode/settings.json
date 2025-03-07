@@ -1,0 +1,44 @@
+{
+  "files.exclude": {
+    "**/node_modules/": true,
+    "**/dist/": true,
+    "**/out/": true,
+    "artifacts": true,
+    "cache": true,
+    "cache_forge": true,
+    "coverage": true,
+    "typechain-types": true,
+    ".husky": true,
+    ".lintstagedrc": true,
+    ".prettierignore": true,
+    ".prettierrc": true,
+    "commitlint.config.ts": true
+  },
+  "search.exclude": {
+    "node_modules/": true,
+    "**/node_modules/": true,
+    "dist/": true,
+    "tmp/": true,
+    "**/.next/": true,
+    "**/*.lock": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeFocusBorder": "#F75F8F", // KU Crimson
+    "activityBar.activeBackground": "#D8D8D8",
+    "activityBar.background": "#333333",
+    "activityBar.foreground": "#F75F8F",
+    "activityBar.inactiveForeground": "#D8D8D8",
+    "editorGroup.border": "#444444",
+    "sash.hoverBorder": "#666666",
+    "sideBar.border": "#F75F8F",
+    "tab.activeBorder": "#000000"
+  },
+  "editor.formatOnSave": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "eslint.enable": true,
+  "solidity.formatter": "prettier", // This is the default so it might be missing.
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": ".prettierrc",
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "all"
+}

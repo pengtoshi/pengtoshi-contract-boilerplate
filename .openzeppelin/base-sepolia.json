@@ -1,0 +1,119 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x35FD13581cCd35c79F01Ce605a07ef46fAE2791f",
+      "txHash": "0x7e943131edfa28bc71ef6b6c6f8b0d267db14010cbefd83afdddffdd9708dbb5",
+      "kind": "uups"
+    },
+    {
+      "address": "0xe26cf429FF7BA70cBb1c364Bc99F828c777d77a0",
+      "txHash": "0xebf0d74aecfab20e34aba0c89ad13589cdee6aa3d24035c825f330f21594ce81",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "e94421ceccbb7ae44c88ad928b99a38af683101c5cb8a95f9c0ab34246484659": {
+      "address": "0x519B51aC32ec0857de0AffECa3F22B3C9F8E0cDD",
+      "txHash": "0xbcaa08ed5c997bd8a11222446908ac483bd1dd75d6ce18fb99126dceb6447813",
+      "layout": {
+        "solcVersion": "0.8.27",
+        "storage": [
+          {
+            "label": "owner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address_payable",
+            "contract": "HelloUpgradeable",
+            "src": "contracts/HelloUpgradeable.sol:9"
+          },
+          {
+            "label": "name",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage",
+            "contract": "HelloUpgradeable",
+            "src": "contracts/HelloUpgradeable.sol:10"
+          },
+          {
+            "label": "helloCount",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "HelloUpgradeable",
+            "src": "contracts/HelloUpgradeable.sol:11"
+          }
+        ],
+        "types": {
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)25_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)"
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_struct(RoleData)25_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "hasRole",
+                "type": "t_mapping(t_address,t_bool)"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32"
+              }
+            ]
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.AccessControl": [
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "_roles",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)25_storage)",
+              "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:61"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
