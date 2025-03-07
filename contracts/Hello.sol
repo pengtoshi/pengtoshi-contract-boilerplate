@@ -1,12 +1,18 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.27;
 
-contract Hello {
+import {IHello} from "contracts/interface/IHello.sol";
+
+contract Hello is IHello {
+    /// @inheritdoc IHello
     address payable public owner;
+    /// @inheritdoc IHello
     string public name;
+    /// @inheritdoc IHello
     uint256 public helloCount;
 
-    event SayHello(string message);
+    /// @notice Emitted when the hello function is called
+    event SayHello(address indexed caller, string message);
 
     constructor(string memory _name) payable {
         owner = payable(msg.sender);
@@ -14,8 +20,9 @@ contract Hello {
         helloCount = 0;
     }
 
+    /// @inheritdoc IHello
     function sayHello(string memory targetName) public {
         helloCount++;
-        emit SayHello(string.concat("Hello, ", targetName, "! My name is ", name, "."));
+        emit SayHello(msg.sender, string.concat("Hello, ", targetName, "! My name is ", name, "."));
     }
 }
